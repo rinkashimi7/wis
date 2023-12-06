@@ -7,8 +7,9 @@
 </head>
 <body>
 <?php 
-echo "Hello, World!<br>";
+<?php 
 ECHO "Hello, World!<br>";
+echo "Hello, World!<br>";
 echo "Hello, World!<br>";
 ecHo "Hello, World!<br>";
 # This is a comment, and
