@@ -1,0 +1,134 @@
+<?php
+include 'connection.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Package Reservation</title>
+   <header>
+   <a href="packages.html"> <img src="IMAGES/DAYO LOGO.png"  alt="Dayo Logo"></a>
+  </header>
+
+</head>
+<body>
+
+ 
+  <form action="booking_reg.php" method="POST">
+    <h2>Enter Your Details:</h2>
+    <label for="firstName">First Name <span>*</span></label>
+    <input type="text" id="firstName" name="first_name" required>
+
+    <label for="lastName">Last Name <span>*</span></label>
+    <input type="text" id="lastName" name="last_name" required>
+
+    <label for="email">Email Address <span>*</span></label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="package">Choose a Package <span>*</span></label>
+    <select id="package" name="package" required>
+      <option value="baguio">Baguio Staycation Package with City Tour</option>
+      <option value="sagada">Sagada Escape</option>
+      <option value="vigan">Vigan Heritage Voyage</option>
+      <option value="alaminos">Alaminos Adventure Tour</option>
+    </select>
+   <label for="numPassengers">Number of Travelers (Max: 10) <span>*</span></label>
+    <input type="number" id="numPassengers" name="guest_pax" min="1" max="10" required>
+
+    <label for="phoneNumber">Cellphone Number (Philippines) <span>*</span></label>
+    <input type="tel" id="phoneNumber" name="cp_num" pattern="[0-9]{11}" placeholder="e.g., 09123456789" required>
+
+    <label for="travelDate">Select Travel Date <span>*</span></label>
+    <input type="date" id="travelDate" name="travel_date" required>
+
+    <label for="travelTime">Select Travel Time <span>*</span></label>
+    <input type="time" id="travelTime" name="travel_time" required>
+
+    <label for="pickupLocation">Pick-up Location</label>
+    <p>#65 2nd Floor Decibar Building,Lower Bonifacio, Baguio City, Philippines (Infront of Caltex Bonifacio)</p>
+
+
+ 
+
+    <button type="submit" class="reservation">Submit Reservation</button>
+</form>
+<style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient( #10835d95, #EFF3F8);
+      height: 170vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+
+    header {
+      width: 30%;
+      height: 30%;
+      text-align: center;
+      
+    }
+
+    header img {
+      max-width: 50%;
+      height: auto;
+      cursor: pointer;
+      
+    }
+
+    form {
+      background-color: rgba(33, 117, 76, 0.488);
+      padding: 40px;
+      
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #19ac14;
+      color: #fff;
+      padding: 20px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    margin-left: 39%;
+
+    }
+
+    button:hover {
+      background-color: #18866a;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+   
+    
+
+  </style>
+</body>
+</html>
